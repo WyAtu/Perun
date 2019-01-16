@@ -1,15 +1,8 @@
-# Perun
-[![Python 2.7](https://img.shields.io/badge/python-2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/WyAtu/Perun/blob/master/LICENSE) [![Vulns](https://img.shields.io/badge/Vulns/20190111-42-red.svg)](https://github.com/WyAtu/Perun/tree/master/vuln) 
-
-**Perun**是一款主要适用于**乙方安服、渗透测试人员和甲方RedTeam红队人员的网络资产漏洞扫描器/扫描框架**，它主要适用于**内网环境**，加载漏洞检测Vuln模块后能够快速发现安全问题，并根据需要生成报表，以方便安全人员对授权项目完成测试工作。
-
-**Perun**由Python2.7和Python标准库开发，所有功能(端口扫描，漏洞检测，控制台输出，生成Html报告)兼容Windows系统和\*nix系统，Html报告采用Vue+Element，**支持对扫描结果的排序、搜索、分页**。
-
-**在内网环境中只需上传Perun的启动器文件**(未安装Python的主机环境下可以使用Pyinstaller[打包](https://github.com/WyAtu/Perun/tree/master/doc/package2exe#%E6%89%93%E5%8C%85perun%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6)生成的单个控制台exe二进制启动器文件，大小在3-5M)，其余文件可以部署在云端，也可以部署在目标内网中，**既可用作普通的端口扫描器，又可用作漏洞扫描器**，方便安全人员在内网环境中进行工作。
+# 关于Vuln模块
 
 ## 支持的Vuln模块
 
-**Perun**目前支持42个Vuln模块
+**Perun**目前支持45个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
@@ -45,8 +38,10 @@
 | rsync.rsync_weakpwd_unauth | 检测Rsync弱口令和未授权访问漏洞 |
 | smb_netbios.computer_info | 获取主机信息，如主机名/域名/操作系统信息，类似于nbtscan |
 | smb_netbios.ms17_010 | 检测MS17-010远程命令执行漏洞 |
-| thinkphp.thinkphp5_rce | 检测ThinkPHP5.*远程代码执行漏洞 |
-| thinkphp.thinkphp5023_rce | 检测ThinkPHP5.0.*(在5.0.23上测试)远程代码执行漏洞 |
+| thinkphp.thinkphp5_rce | 检测ThinkPHP 5.* 远程代码执行漏洞 |
+| thinkphp.thinkphp5010_rce | 检测ThinkPHP 5.0.*(低于5.0.10) 远程代码执行漏洞 |
+| thinkphp.thinkphp5023_rce | 检测ThinkPHP 5.0.*(低于5.0.23) 远程代码执行漏洞 |
+| thinkphp.thinkphp5152_rce | 检测ThinkPHP 5.1.\*/5.2.\*(5.1.x - 5.1.31, 5.2.0beta1) 远程代码执行漏洞 |
 | web.directory_listing | 扫描列目录漏洞 |
 | web.git_or_svn_disclosure | 扫描Git和SVN源码泄露漏洞 |
 | web.web_sensitive | 扫描敏感文件和目录 |
