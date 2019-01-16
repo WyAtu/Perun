@@ -18,8 +18,6 @@
 
 - [Perun/vuln/nginx/nginx_httproxy.py](https://github.com/WyAtu/Perun/blob/master/vuln/nginx/nginx_httproxy.py)Vuln模块，用于检测Nginx配置不当导致正向代理
 
-[Vuln模块列表](https://github.com/WyAtu/Perun/blob/master/doc/aboutvuln.md#%E6%94%AF%E6%8C%81%E7%9A%84vuln%E6%A8%A1%E5%9D%97)
-
 ## 2019.01.10
 
 ### 新增
