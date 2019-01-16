@@ -30,6 +30,7 @@
 | mongodb.mongodb_unauth | 检测MongoDB未授权访问漏洞 |
 | mysql.mysql_weakpwd | 检测MySQL弱口令 |
 | nexus_repository.nexus_weakpwd | 检测Sonatype Nexus Repository Manager弱口令 |
+| nginx.nginx_httproxy | 检测Nginx配置不当导致正向代理 |
 | tomcat.tomcat_put | 检测Tomcat PUT远程命令执行漏洞(CVE-2017-12615) |
 | phpmyadmin.phpmyadmin_weakpwd | 检测phpMyAdmin漏洞 |
 | phpmyadmin.phpmyadmin_setup_rce | 检测phpMyAdmin Scripts/setup.php远程命令执行漏洞 |
