@@ -22,6 +22,8 @@ try:
     globals()['set_port'] = [_.lower() for _ in args['set_port']]
     globals()['add_web_path'] = args['add_web_path']
 
+    globals()['THREADMAX'] = threading.BoundedSemaphore(thread)
+
     if search_input or _filter_input: MakeSearchByfilter()
 
     if exclude: do_exclude(exclude)
