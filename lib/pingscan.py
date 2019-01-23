@@ -14,15 +14,18 @@ class PingScan():
             try:
                 p=Popen('ping -n 1 ' + ip, stdout=PIPE)
             except:
-                PrintConsole('Ping failed, please check the privilege or use --skip-ping to skip ping', 'error')
+                THREADMAX.release()
+                PrintConsole('Ping failed, please check the privilege, reduce the number of threads or use --skip-ping to skip ping', 'error')
             if p.stdout.read().find("TTL") != -1: PING_SCAN_RESULT_LIST.append(ip)
         else:
             try:
                 p=Popen(['ping','-c 1',ip], stdout=PIPE, stderr=PIPE)
 
-            except: 
-                PrintConsole('Ping failed, please check the privilege or use --skip-ping to skip ping', 'error')
+            except:
+                THREADMAX.release()
+                PrintConsole('Ping failed, please check the privilege, reduce the number of threads or use --skip-ping to skip ping', 'error')
             if p.stdout.read().find("1 received") != -1: PING_SCAN_RESULT_LIST.append(ip)
+        THREADMAX.release()
 
     def _make_queue(self, ips_list):
         self.q = Queue()
@@ -34,10 +37,19 @@ class PingScan():
                 ip = self.q.get(block = True, timeout = 1)
                 self._make_thread(ip)
                 self.q.task_done()
-            except:
+            except KeyboardInterrupt:
+                try:
+                    THREADMAX.release()
+                    PrintConsole('Ctrl+C by user aborted', 'error')
+                except:
+                    PrintConsole('Ctrl+C by user aborted', 'error')
+            except ValueError:
+                PrintConsole('Ctrl+C by user aborted', 'error')
+            except:    
                 pass
 
     def _make_thread(self, ip):
+        THREADMAX.acquire()
         t = threading.Thread(target=self._ping_scan, args=(ip,))
         t.setDaemon(True)
         t.start()
