@@ -12,7 +12,7 @@ class VulnChecker(VulnCheck):
     def _check(self, ip, port):
         file_name = file_content = random8string()
         url1 = "http://%s:%d/%s.txt"%(ip, int(port), file_name) if add_web_path == "" else "http://%s:%d/%s/%s.txt"%(ip, int(port), add_web_path, file_name)
-        url2 = "http://%s:%d/%s.txt"%(ip, int(port), file_name) if add_web_path == "" else "https://%s:%d/%s/%s.txt"%(ip, int(port), add_web_path, file_name)
+        url2 = "https://%s:%d/%s.txt"%(ip, int(port), file_name) if add_web_path == "" else "https://%s:%d/%s/%s.txt"%(ip, int(port), add_web_path, file_name)
 
         try:
             req = Requester(url1, method='put', data={'test':file_content})
