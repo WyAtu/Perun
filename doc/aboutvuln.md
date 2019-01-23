@@ -2,7 +2,7 @@
 
 ## 支持的Vuln模块
 
-**Perun**目前支持45个Vuln模块
+**Perun**目前支持50个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
@@ -16,8 +16,11 @@
 | elasticsearch.read_cve20155531 | 检测Elasticsearch任意文件读取漏洞(CVE-2015-5531) |
 | ftp.ftp_weakpwd | 检测FTP弱口令 |
 | glassfish.glassfish_file_read | 检测Glassfish任意文件读取漏洞 |
+| glassfish.glassfish_weakpwd | 检测Glassfis弱口令 |
+| grafana.grafana_weakpwd | 检测Grafana弱口令 |
 | iis.iis_webdav_put | 检测IIS WebDav PUT任意文件上传漏洞 |
 | iis.iis_webdav_rce | 检测IIS WebDav远程命令执行漏洞(CVE-2017-7269) |
+| iis.short_filename | 检测IIS短文件名漏洞 |
 | javarmi.javarmi_rce | 检测Java RMI远程命令执行漏洞 |
 | jboss.jboss_readonly | 检测是否存在JBoss路径/invoker/readonly，路径存在即可能存在漏洞CVE-2017-12149 |
 | jboss.jboss_jmxconsole | 检测是否存在JBoss路径/jmx-console/HtmlAdaptor，路径存在即可能存在漏洞CVE-2006-5750/CVE-2007-1036/CVE-2010-0738 |
@@ -26,9 +29,11 @@
 | jboss.jboss_jbossmq_httpil | 检测是否存在JBoss路径/jbossmq-httpil/HTTPServerILServlet，路径存在即可能存在漏洞CVE-2017-7504 |
 | jboss.jboss_EJBInvokerServlet | 检测是否存在JBoss路径/invoker/EJBInvokerServlet，路径存在即可能存在漏洞CVE-2012-0874/CVE-2013-4810 |
 | jboss.jboss_JMXInvokerServlet | 检测是否存在JBoss路径/invoker/JMXInvokerServlet，路径存在即可能存在漏洞CVE-2007-1036/CVE-2012-0874/CVE-2013-4810/CVE-2017-7501 |
+| jenkins.user_enumeration | 检测Jenkins用户名枚举漏洞 |
 | memcache.memcache_unauth | 检测Memcache未授权访问漏洞 |
 | mongodb.mongodb_unauth | 检测MongoDB未授权访问漏洞 |
 | mysql.mysql_weakpwd | 检测MySQL弱口令 |
+| mssql.mssql_weakpwd | 检测MSSQL弱口令 |
 | nexus_repository.nexus_weakpwd | 检测Sonatype Nexus Repository Manager弱口令 |
 | nginx.nginx_httproxy | 检测Nginx配置不当导致正向代理 |
 | tomcat.tomcat_put | 检测Tomcat PUT远程命令执行漏洞(CVE-2017-12615) |
