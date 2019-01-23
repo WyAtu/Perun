@@ -89,10 +89,12 @@ class Requester():
             if response.geturl() != self._url:
                 self.code = 301 # 301 or 302
         except urllib2.HTTPError as e: # 400-599
+            if e.code == 400 and 'https' in e.read().lower():
+                raise RequesterOpenError()
             self.headers = str(e.headers)
             self.headers_dict = e.headers
             self.code = e.code
-            self.html = ""
+            self.html = e.read()
         except urllib2.URLError as e:
             raise RequesterOpenError()
         except:
@@ -112,6 +114,8 @@ class Requester():
             if response.geturl() != self._url:
                 self.code = 301 # 301 or 302
         except urllib2.HTTPError as e:
+            if e.code == 400 and 'https' in e.read().lower():
+                raise RequesterOpenError()
             self.headers = str(e.headers)
             self.headers_dict = e.headers
             self.code = e.code
@@ -136,6 +140,8 @@ class Requester():
             if response.geturl() != self._url:
                 self.code = 301 # 301 or 302
         except urllib2.HTTPError as e:
+            if e.code == 400 and 'https' in e.read().lower():
+                raise RequesterOpenError()
             self.headers_dict = e.headers
             self.headers = str(e.headers)
             self.code = e.code
