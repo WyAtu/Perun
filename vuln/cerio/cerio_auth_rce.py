@@ -22,7 +22,6 @@ class VulnChecker(VulnCheck):
                     try:
                         b64Val = base64.b64encode("%s:%s"%(user, pass_))
                         url = '%s://%s:%d/cgi-bin/main.cgi?cgi=PING&mode=9'%(http_, ip, port)
-                        print url
                         data = {'cgi':'PING', 'mode':'9'}
                         heads = {'content-type': 'application/json','Host': ip,'Accept-Encoding': 'gzip, deflate', 'Connection' : 'keep-alive','Authorization': 'Basic %s' % b64Val}
                         get_pid = Requester(url, method='post', data=data, header=heads)
