@@ -2,13 +2,14 @@
 
 ## 支持的Vuln模块
 
-**Perun**目前支持50个Vuln模块
+**Perun**目前支持52个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
 | activemq.activemq_weakpwd | 检测ActiveMQ弱口令 |
 | activemq.activemq_upload | 检测ActiveMQ任意文件上传漏洞(CVE-2016-3088) |
 | axis2.axis2_file_read | 检测Axis2任意文件读取漏洞 |
+| cerio.cerio_auth_rce | 检测CERIO路由器认证后的RCE漏洞(CVE-2018-18852) |
 | docker.docker_unauth | 检测Docker未授权访问漏洞 |
 | elasticsearch.rce_cve20143120 | 检测Elasticsearch远程代码执行漏洞(CVE-2014-3120) |
 | elasticsearch.rce_cve20151427 | 检测Elasticsearch远程代码执行漏洞(CVE-2015-1427) |
@@ -31,6 +32,7 @@
 | jboss.jboss_JMXInvokerServlet | 检测是否存在JBoss路径/invoker/JMXInvokerServlet，路径存在即可能存在漏洞CVE-2007-1036/CVE-2012-0874/CVE-2013-4810/CVE-2017-7501 |
 | jenkins.user_enumeration | 检测Jenkins用户名枚举漏洞 |
 | memcache.memcache_unauth | 检测Memcache未授权访问漏洞 |
+| mikrotik.winbox_cve_2018_14847 | 检测MikroTik RouterOS Winbox未经身份验证的任意文件读/写漏洞(CVE-2018-14847) |
 | mongodb.mongodb_unauth | 检测MongoDB未授权访问漏洞 |
 | mysql.mysql_weakpwd | 检测MySQL弱口令 |
 | mssql.mssql_weakpwd | 检测MSSQL弱口令 |

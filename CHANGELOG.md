@@ -1,5 +1,13 @@
 # Changelog
 
+## 2019.01.27
+
+### 新增
+
+- [Perun/vuln/cerio/cerio_auth_rce.py](https://github.com/WyAtu/Perun/blob/master/vuln/cerio/cerio_auth_rce.py)Vuln模块，用于检测CERIO路由器认证后的RCE漏洞(CVE-2018-18852)
+
+- [Perun/vuln/mikrotik/winbox_cve_2018_14847.py](https://github.com/WyAtu/Perun/blob/master/vuln/mikrotik/winbox_cve_2018_14847.py)Vuln模块，用于检测MikroTik RouterOS Winbox未经身份验证的任意文件读/写漏洞(CVE-2018-14847)
+
 ## 2019.01.23
 
 ### 修改
