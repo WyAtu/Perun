@@ -28,6 +28,7 @@ VULN_CHECK_LIST = [
     'jboss.jboss_EJBInvokerServlet',
     'jboss.jboss_JMXInvokerServlet',
     'jenkins.user_enumeration',
+    'jenkins.unauth2rce',
     'memcache.memcache_unauth',
     'mikrotik.winbox_cve_2018_14847',
     'mongodb.mongodb_unauth',

@@ -2,7 +2,7 @@
 
 ## 支持的Vuln模块
 
-**Perun**目前支持52个Vuln模块
+**Perun**目前支持53个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
@@ -30,6 +30,7 @@
 | jboss.jboss_jbossmq_httpil | 检测是否存在JBoss路径/jbossmq-httpil/HTTPServerILServlet，路径存在即可能存在漏洞CVE-2017-7504 |
 | jboss.jboss_EJBInvokerServlet | 检测是否存在JBoss路径/invoker/EJBInvokerServlet，路径存在即可能存在漏洞CVE-2012-0874/CVE-2013-4810 |
 | jboss.jboss_JMXInvokerServlet | 检测是否存在JBoss路径/invoker/JMXInvokerServlet，路径存在即可能存在漏洞CVE-2007-1036/CVE-2012-0874/CVE-2013-4810/CVE-2017-7501 |
+| jenkins.unauth2rce | 检测Jenkins pre-auth 远程命令执行漏洞 |
 | jenkins.user_enumeration | 检测Jenkins用户名枚举漏洞 |
 | memcache.memcache_unauth | 检测Memcache未授权访问漏洞 |
 | mikrotik.winbox_cve_2018_14847 | 检测MikroTik RouterOS Winbox未经身份验证的任意文件读/写漏洞(CVE-2018-14847) |

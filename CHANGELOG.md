@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019.02.23
+
+## 新增
+
+- [Perun/vuln/jenkins/unauth2rce.py](https://github.com/WyAtu/Perun/blob/master/vuln/jenkins/unauth2rce.py)Vuln模块，用于检测可能存在的Jenkins pre-auth RCE漏洞
+
 ## 2019.01.27
 
 ### 新增
