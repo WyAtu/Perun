@@ -79,6 +79,10 @@ Perun由Perun.py(或是由Perun.py打包生成的二进制文件)启动，有两
 
 [打包Perun二进制文件](https://github.com/WyAtu/Perun/tree/master/doc/package2exe#%E6%89%93%E5%8C%85perun%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6)
 
+## 更新日志
+
+[CHANGELOG.md](https://github.com/WyAtu/Perun/blob/master/CHANGELOG.md)
+
 ## 致谢
 
 - [liyuan](https://github.com/ly1102)大哥的报告前端代码支持
