@@ -2,7 +2,7 @@
 
 ## 支持的Vuln模块
 
-**Perun**目前支持53个Vuln模块
+**Perun**目前支持54个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
@@ -47,6 +47,7 @@
 | rsync.rsync_weakpwd_unauth | 检测Rsync弱口令和未授权访问漏洞 |
 | smb_netbios.computer_info | 获取主机信息，如主机名/域名/操作系统信息，类似于nbtscan |
 | smb_netbios.ms17_010 | 检测MS17-010远程命令执行漏洞 |
+| smb_netbios.new_ms17_010 | 检测MS17-010远程命令执行漏洞新版本 |
 | thinkphp.thinkphp5_rce | 检测ThinkPHP 5.* 远程代码执行漏洞 |
 | thinkphp.thinkphp5010_rce | 检测ThinkPHP 5.0.*(低于5.0.10) 远程代码执行漏洞 |
 | thinkphp.thinkphp5023_rce | 检测ThinkPHP 5.0.*(低于5.0.23) 远程代码执行漏洞 |

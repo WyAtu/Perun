@@ -43,6 +43,7 @@ VULN_CHECK_LIST = [
     'rsync.rsync_weakpwd_unauth',
     'smb_netbios.computer_info',
     'smb_netbios.ms17_010',
+    'smb_netbios.new_ms17_010',
     'thinkphp.thinkphp5_rce',
     'thinkphp.thinkphp5010_rce',
     'thinkphp.thinkphp5023_rce',

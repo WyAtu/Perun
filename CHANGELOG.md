@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019.02.24
+
+## 新增
+
+- [Perun/vuln/smb_netbios/new_ms17_010.py](https://github.com/WyAtu/Perun/blob/master/vuln/smb_netbios/new_ms17_010.py)Vuln模块，新的MS17-010检测模块，之前的模块Payload可能会有漏报情况发生
+
 ## 2019.02.23
 
 ## 新增
