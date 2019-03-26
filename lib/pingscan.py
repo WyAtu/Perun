@@ -36,7 +36,7 @@ class PingScan():
             try:
                 ip = self.q.get(block = True, timeout = 1)
                 self._make_thread(ip)
-                self.q.task_done()
+                #self.q.task_done()
             except KeyboardInterrupt:
                 try:
                     THREADMAX.release()
@@ -46,6 +46,10 @@ class PingScan():
             except ValueError:
                 PrintConsole('Ctrl+C by user aborted', 'error')
             except:    
+                pass
+            try:
+                self.q.task_done()
+            except:
                 pass
 
     def _make_thread(self, ip):
