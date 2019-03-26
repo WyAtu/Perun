@@ -8,9 +8,11 @@ class MakeStartThread():
         self._start_thread(queue)
 
     def _lambda(self, queue):
+        THREADMAX.acquire()
         t = PerunThread(queue)
         t.setDaemon(True)
         t.start()
+        THREADMAX.release()
         self.thread_list.append(t)
 
     def _start_thread(self, queue):
