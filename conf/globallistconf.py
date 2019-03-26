@@ -56,6 +56,7 @@ VULN_CHECK_LIST = [
     'weblogic.rce_cve20182628',
     'weblogic.ssrf_cve20144210',
     'zabbix.zabbix_weakpwd',
+    'zimbra.zimbra_xxe2rce',
     'zookeeper.zookeeper_unauth',
 ]
 

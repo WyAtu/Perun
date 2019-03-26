@@ -10,6 +10,10 @@
 
 - 修改了对不解析域名的处理，使Perun可以直接加载未经有效性验证的域名列表文件
 
+## 新增
+
+- Zimbra CVE-2019-9670 从XXE到RCE Vuln模块(仅检测XXE，RCE利用见https://github.com/WyAtu/ZimbraXXE2RCE)
+
 ## 2019.02.24
 
 ## 新增
