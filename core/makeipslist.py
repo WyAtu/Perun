@@ -23,9 +23,11 @@ class MakeIPsList():
         elif '/' in target:
             self.target = list(set(self.target + get_ips_list_by_cidr(target)))
         else:
-            try: socket.gethostbyname(target)
-            except: PrintConsole('Failed to parse the target "%s"'%target, 'error')
-            self.target = list(set(self.target + [target, ]))
+            try: 
+                socket.gethostbyname(target)
+                self.target = list(set(self.target + [target, ]))
+            except: 
+                PrintConsole('Failed to parse the target "%s"'%target, 'info')
             #self.target = list(set(self.target + get_ip_by_ip_or_url(target)))
 
 globals()['MakeIPsList'] = MakeIPsList
