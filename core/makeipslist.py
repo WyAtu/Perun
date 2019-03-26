@@ -7,7 +7,7 @@ class MakeIPsList():
         map(self._get_ips_list_from_target, target)
 
     def _get_ips_list_from_target(self, target):
-    	target = target.replace('http://', '').replace('https://', '').rstrip('/')
+        target = target.replace('http://', '').replace('https://', '').rstrip('/')
         if ':' in target:
             target = target.split(':')[0]
         if exists(target):
@@ -18,7 +18,7 @@ class MakeIPsList():
             except:
                 try: fp.close()
                 except: pass
-        if '-' in target:
+        if '-' in target and target.replace(".", "").replace("-", "").isdigit():
             self.target = list(set(self.target + get_ips_list_by_a2b(target)))
         elif '/' in target:
             self.target = list(set(self.target + get_ips_list_by_cidr(target)))
