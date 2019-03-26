@@ -44,8 +44,12 @@ class VulnCheck():
             try:
                 ip, port = self.q.get(block = True, timeout = 1).split(':')
                 self._make_thread(ip, port)
+                #self.q.task_done()
+            except:
+                pass
+            try:
                 self.q.task_done()
-            except Exception as e:
+            except:
                 pass
 
     def _make_thread(self, ip, port):
