@@ -11,6 +11,9 @@ class PerunThread(threading.Thread):
             try:
                 ip, port = self.q.get(block = True, timeout = 1).split(':')
                 process_port_scan(ip, int(port))
+            except:
+                pass
+            try:
                 self.q.task_done()
             except:
                 pass
