@@ -2,7 +2,7 @@
 
 ## 支持的Vuln模块
 
-**Perun**目前支持55个Vuln模块
+**Perun**目前支持56个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
@@ -10,6 +10,7 @@
 | activemq.activemq_upload | 检测ActiveMQ任意文件上传漏洞(CVE-2016-3088) |
 | axis2.axis2_file_read | 检测Axis2任意文件读取漏洞 |
 | cerio.cerio_auth_rce | 检测CERIO路由器认证后的RCE漏洞(CVE-2018-18852) |
+| confluence.confluence_ssti| 检测confluence SSTI(CVE-2019-3396) |
 | docker.docker_unauth | 检测Docker未授权访问漏洞 |
 | elasticsearch.rce_cve20143120 | 检测Elasticsearch远程代码执行漏洞(CVE-2014-3120) |
 | elasticsearch.rce_cve20151427 | 检测Elasticsearch远程代码执行漏洞(CVE-2015-1427) |
