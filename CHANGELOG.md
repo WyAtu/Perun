@@ -4,7 +4,7 @@
 
 ## 新增
 
-- Confluence CVE-2019-3396 SSTI to RCE(仅检测文件读取)
+- Confluence CVE-2019-3396 SSTI to RCE(出于漏洞影响考虑不公开RCE脚本，故仅检测文件读取)
 
 ## 2019.03.26
 
@@ -18,7 +18,7 @@
 
 ## 新增
 
-- Zimbra CVE-2019-9670 从XXE到RCE Vuln模块(仅检测XXE，RCE利用见https://github.com/WyAtu/ZimbraXXE2RCE)
+- Zimbra CVE-2019-9670 从XXE到RCE Vuln模块(出于漏洞影响考虑不公开RCE脚本，故仅检测XXE)
 
 ## 2019.02.24
 
