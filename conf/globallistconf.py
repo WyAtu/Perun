@@ -7,6 +7,7 @@ VULN_CHECK_LIST = [
     'activemq.activemq_upload',
     'axis2.axis2_file_read',
     'cerio.cerio_auth_rce',
+    'confluence.confluence_ssti',
     'docker.docker_unauth',
     'elasticsearch.rce_cve20143120',
     'elasticsearch.rce_cve20151427',
