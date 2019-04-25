@@ -55,6 +55,7 @@ VULN_CHECK_LIST = [
     'web.web_sensitive',
     'weblogic.rce_cve201710271',
     'weblogic.rce_cve20182628',
+    'weblogic.rce_cnvdc201948814',
     'weblogic.ssrf_cve20144210',
     'zabbix.zabbix_weakpwd',
     'zimbra.zimbra_xxe2rce',

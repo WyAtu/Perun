@@ -1,5 +1,11 @@
 # Changelog
 
+## 2019.04.25
+
+## 新增
+
+- WebLogic wls9-async RCE CNVD-C-2019-48814 by Ntears
+
 ## 2019.04.09
 
 ## 新增

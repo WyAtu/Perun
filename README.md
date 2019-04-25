@@ -1,5 +1,5 @@
 # Perun
-[![Python 2.7](https://img.shields.io/badge/python-2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/WyAtu/Perun/blob/master/LICENSE) [![Vulns](https://img.shields.io/badge/Vulns/20190409-56-red.svg)](https://github.com/WyAtu/Perun/tree/master/vuln) 
+[![Python 2.7](https://img.shields.io/badge/python-2.7-yellow.svg)](https://www.python.org/) [![License](https://img.shields.io/aur/license/yaourt.svg)](https://github.com/WyAtu/Perun/blob/master/LICENSE) [![Vulns](https://img.shields.io/badge/Vulns/20190425-57-red.svg)](https://github.com/WyAtu/Perun/tree/master/vuln) 
 
 **Perun**是一款主要适用于**乙方安服、渗透测试人员和甲方RedTeam红队人员的网络资产漏洞扫描器/扫描框架**，它主要适用于**内网环境**，加载漏洞检测Vuln模块后能够快速发现安全问题，并根据需要生成报表，以方便安全人员对授权项目完成测试工作。
 
@@ -65,7 +65,7 @@ Perun由Perun.py(或是由Perun.py打包生成的二进制文件)启动，有两
 
 ## 支持的Vuln模块
 
-**Perun**目前支持56个Vuln模块
+**Perun**目前支持57个Vuln模块
 
 [支持的Vuln模块](https://github.com/WyAtu/Perun/blob/master/doc/aboutvuln.md#%E6%94%AF%E6%8C%81%E7%9A%84vuln%E6%A8%A1%E5%9D%97)
 
@@ -90,6 +90,8 @@ Perun由Perun.py(或是由Perun.py打包生成的二进制文件)启动，有两
 - [xunfeng](https://github.com/ysrc/xunfeng)、[Scanver](https://github.com/ydhcui/Scanver/)等开源项目和其他开源脚本/项目，很多Vuln模块参考或取自这些优秀的开源项目
 
 在此表示感谢。
+
+- Ntears编写的Weblogic wls9-async RCE CNVD-C-2019-48814 Vuln模块
 
 ## 说明
 

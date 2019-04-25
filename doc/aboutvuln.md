@@ -2,7 +2,7 @@
 
 ## 支持的Vuln模块
 
-**Perun**目前支持56个Vuln模块
+**Perun**目前支持57个Vuln模块
 
 | Vuln模块名 | Vuln模块说明信息 |
 | ------ | ------ |
@@ -58,6 +58,7 @@
 | web.web_sensitive | 扫描敏感文件和目录 |
 | weblogic.rce_cve201710271 | 检测WebLogic WLS远程命令执行漏洞(CVE-2017-10271) |
 | weblogic.rce_cve20182628 | 检测WebLogic WLS远程命令执行漏洞(CVE-2018-2628) |
+| weblogic.rce_cnvdc201948814 | 检测WebLogic wls9-async RCE漏洞(CNVD-C-2019-48814) |
 | weblogic.ssrf_cve20144210 | 检测WebLogic SSRF漏洞(CVE-2014-4210) |
 | zabbix.zabbix_weakpwd | 检测Zabbix弱口令 |
 | zimbra.zimbra_xxe2rce | 检测Zimbra从XXE到RCE(CVE-2019-9670)|
